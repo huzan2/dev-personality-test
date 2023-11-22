@@ -7,6 +7,9 @@ const ResultPage = () => {
     navigate("/");
   };
   return (
+    /*
+    구현 필요사항: 대충 테스트 결과 표시될 부분이랑 메인화면으로 돌아가기 버튼, 공유하기 버튼
+     */
     <div>
       result page
       <div>
