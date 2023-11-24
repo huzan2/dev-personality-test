@@ -17,7 +17,7 @@ const ResultPage = () => {
      */
     <div>
 
-      <div style={{textAlign: 'center', fontSize: '35px', marginTop: '40px', marginBottom: '10px'}}>
+      <div style={{textAlign: 'center', marginTop: '200px', fontSize: '35px' }}>
         result page
       </div>
 
@@ -25,7 +25,7 @@ const ResultPage = () => {
         <div>
           <CustomButton title={"돌아가기"} onClick={onClickBackButton} />
         </div>
-
+        
         <div>
           <CustomButton title={"공유하기"} onClick={onClickShareButton} />
         </div>
