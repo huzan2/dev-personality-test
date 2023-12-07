@@ -13,16 +13,16 @@ export const KakaoShare = () => {
         imageUrl:
           "https://www.campusn.co.kr/data/photos/20200415/art_1586431811745_e7f32c.jpg",
         link: {
-          mobileWebUrl: "http://localhost:3000",
-          webUrl: "http://localhost:3000",
+          mobileWebUrl: "https://dev-personality-test.web.app",
+          webUrl: "https://dev-personality-test.web.app",
         },
       },
       buttons: [
         {
           title: "나도 검사할래",
           link: {
-            mobileWebUrl: "http://localhost:3000",
-            webUrl: "http://localhost:3000",
+            mobileWebUrl: "https://dev-personality-test.web.app",
+            webUrl: "https://dev-personality-test.web.app",
           },
         },
       ],

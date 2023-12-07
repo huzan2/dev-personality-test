@@ -1,7 +1,7 @@
 const CustomButton = ({ type = "button", title, onClick }) => {
   return (
     <button
-      className="flex w-full mt-5 justify-center rounded-md bg-BLUE_2 px-3 py-1.5 text-base leading-6 text-white shadow-sm hover:bg-BLUE_1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-BLUE_3 sm:mx-auto sm:w-full sm:max-w-sm"
+      className="flex w-[80%] mt-5 justify-center font-['Neo4'] rounded-full bg-white px-3 py-7 text-lg leading-6 text-BLUE_3 shadow-sm hover:bg-BLUE_3 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mx-auto sm:max-w-sm"
       type={type}
       onClick={onClick}
     >
