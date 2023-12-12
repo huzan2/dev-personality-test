@@ -1,7 +1,7 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import CustomButton from "../Components/CustomButton";
 import { useEffect, useState } from "react";
-import { KakaoShare } from "../util/KakaoShare";
+import { KakaoShareResult } from "../util/KakaoShare";
 import Footer from "../Components/Footer";
 import { getMbti } from "../util/mbti";
 const kakao = window.Kakao;
@@ -17,7 +17,7 @@ const ResultPage = () => {
 
   const onClickShareButton = () => {
     if (kakao.isInitialized()) {
-      KakaoShare();
+      KakaoShareResult();
     }
   };
 
@@ -28,7 +28,7 @@ const ResultPage = () => {
       console.log("Kakao API connected");
       // 카카오 디벨로퍼스 연결 상태 확인
     }
-    setMbti(getMbti(searchParams.get("n")));
+    setMbti(getMbti(searchParams.get("n"))); // 쿼리스트링 가져오기
   }, [searchParams]);
 
   return (

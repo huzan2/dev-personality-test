@@ -4,10 +4,16 @@ import Footer from "../Components/Footer";
 import { useEffect, useState } from "react";
 import { db } from "../util/firebase";
 import { ref, get, child } from "firebase/database";
+import { setQuestions } from "../util/setQuestions";
+import { useRecoilState } from "recoil";
+import { CurrentQuestion, Mbti, QuestionsState } from "../util/Atom";
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const [participation, setParticipation] = useState(0);
+  const [participation, setParticipation] = useState(0); // 참여자수
+  const [Questions, setQuestionss] = useRecoilState(QuestionsState); // 질문 배열
+  const [i, setI] = useRecoilState(CurrentQuestion); // 질문 인덱스(currentQuestion)
+  const [m, setM] = useRecoilState(Mbti); // mbti (4444)
   const onClickStartButton = () => {
     navigate("/test");
   };
@@ -18,6 +24,15 @@ const HomePage = () => {
         setParticipation(snapshot.val());
       }
     });
+    // firebase DB 연결하고 참여자수 받아오기
+    setQuestions().then((result) => {
+      setQuestionss(result);
+    });
+    setI(0);
+    setM(4444);
+    console.log(i, m, Questions);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // 질문 인덱스, 질문 배열, mbti 숫자(4444) 초기세팅
   }, []);
 
   return (
