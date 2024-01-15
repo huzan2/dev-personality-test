@@ -28,11 +28,11 @@ const HomePage = () => {
     setQuestions().then((result) => {
       setQuestionss(result);
     });
+    // 질문 인덱스, 질문 배열, mbti 숫자(4444) 초기세팅
     setI(0);
     setM(4444);
     console.log(i, m, Questions);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // 질문 인덱스, 질문 배열, mbti 숫자(4444) 초기세팅
   }, []);
 
   return (
@@ -44,8 +44,8 @@ const HomePage = () => {
           <p className="font-['Neo2']">금지</p>
         </div>
         <div className="text-8xl font-['BitBit'] mt-2 mb-20">
-          <p className="font-outline-1 text-BLUE_3">개발자</p>
-          <p className="font-outline-1 text-white">테스트</p>
+          <p className="font-outline-2 text-BLUE_3">개발자</p>
+          <p className="font-outline-2 text-white">테스트</p>
         </div>
         <CustomBigButton title={"시작하기"} onClick={onClickStartButton} />
         <p className="mt-2 text-xs font-['Neo3'] text-gray-500">

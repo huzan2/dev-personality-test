@@ -30,8 +30,12 @@ export const KakaoShare = () => {
   }
 };
 
-export const KakaoShareResult = () => {
-  // 테스트 결과 공유하기
+// 테스트 결과 공유하기
+export const KakaoShareResult = (mbti) => {
+  let result = {
+    lan: "나는 @@@한 @@@언어!",
+    img: "https://i.ibb.co/X8D28sn/MainPage.jpg",
+  };
   if (window.Kakao) {
     const kakao = window.Kakao;
     if (!kakao.isInitialized()) {
@@ -41,9 +45,9 @@ export const KakaoShareResult = () => {
     kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: "대충 검사결과",
-        description: "대충 상세설명?",
-        imageUrl: "https://i.ibb.co/X8D28sn/MainPage.jpg",
+        title: `${result.lan}`,
+        description: "개발자 테스트",
+        imageUrl: `${result.img}`,
         link: {
           mobileWebUrl: "https://dev-personality-test.web.app",
           webUrl: "https://dev-personality-test.web.app",
@@ -51,7 +55,7 @@ export const KakaoShareResult = () => {
       },
       buttons: [
         {
-          title: "나도 검사할래",
+          title: "테스트 바로가기",
           link: {
             mobileWebUrl: "https://dev-personality-test.web.app",
             webUrl: "https://dev-personality-test.web.app",

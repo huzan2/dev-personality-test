@@ -96,25 +96,27 @@ const TestPage = () => {
         ) : (
           <>
             <div className="flex flex-col items-center justify-center w-full">
-              <div className="max-w-[80%] mt-20 mb-20">
+              <div className="max-w-[80%] mt-8 mb-20 justify-center text-center">
                 <p
-                  className="font-['BitBit'] text-3xl text-gray-700"
+                  className="font-['BitBit'] text-3xl text-gray-700 absolute left-1/2 -translate-x-1/2 w-full sm:max-w-sm"
                   style={{ whiteSpace: "pre-line" }}
                 >
                   {questionArray[currentQuestion].text}
                 </p>
               </div>
-              <CustomButton
-                title={questionArray[currentQuestion].choices[0]}
-                onClick={handleChoice1}
-              />
-              <CustomButton
-                title={questionArray[currentQuestion].choices[1]}
-                onClick={handleChoice2}
-              />
-              <CustomButton title={"뒤로가기"} onClick={handleBackButton} />
+              <div className="flex flex-col w-full mt-12 items-center">
+                <CustomButton
+                  title={questionArray[currentQuestion].choices[0]}
+                  onClick={handleChoice1}
+                />
+                <CustomButton
+                  title={questionArray[currentQuestion].choices[1]}
+                  onClick={handleChoice2}
+                />
+                <CustomButton title={"뒤로가기"} onClick={handleBackButton} />
+              </div>
             </div>
-            <div className="h-1 w-[80%] bg-gray-400 justify-center mx-auto mt-4">
+            <div className="h-1 w-[80%] bg-gray-400 justify-center mx-auto mt-12">
               <div
                 className="h-1 bg-indigo-500 justify-center"
                 style={{ width: `${progress}%` }}

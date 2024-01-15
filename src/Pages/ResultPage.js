@@ -17,7 +17,7 @@ const ResultPage = () => {
 
   const onClickShareButton = () => {
     if (kakao.isInitialized()) {
-      KakaoShareResult();
+      KakaoShareResult(mbti);
     }
   };
 
